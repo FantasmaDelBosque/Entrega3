@@ -1,0 +1,17 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+    <diV class="contenido">
+        <h1 class="titulo">Todos los Conciertos</h1>
+        <ul>
+            {% for concierto in conciertos %}
+                <li>{{ concierto.fecha }} - {{ concierto.lugar }}  - {{ concierto.pais }}  - {{ concierto.estado }}</li>
+                <li><a href="{{ evento.boton_compra }}" class="buttonCustom" target="_blank">Comprar boleto</a></li>                    
+            {% endfor %}  
+        </ul>
+
+    </diV>
+
+    
+{% endblock contenidoQueCambia %}

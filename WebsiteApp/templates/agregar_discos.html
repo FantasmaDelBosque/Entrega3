@@ -1,0 +1,29 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+    <div class="contenido">
+        <h1 class="titulo">Discos</h1>
+        <h2 class="subtitulo">Agregar disco</h2>
+        <br>
+        <form  action="{% url 'agregar_discos' %}" method="post"> {% csrf_token %}
+           
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" maxlength="100" required><br><br>
+    
+            <label for="año_lanzamiento">Año de Lanzamiento:</label>
+            <input type="number" id="anio_lanzamiento" name="anio_lanzamiento" required><br><br>
+    
+            <label for="portada">Portada:</label>
+            <input type="file" id="portada" name="portada"><br><br>
+    
+            <label for="url_compra">URL de Compra:</label>
+            <input type="url" id="url_compra" name="url_compra"><br><br>
+    
+            <input type="submit" value="Guardar">
+        </form>    
+    </div>
+
+{% endblock contenidoQueCambia %}
+
+

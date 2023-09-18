@@ -1,0 +1,23 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+    <div class="contenido">
+        <h1 class="titulo">Todos los Discos</h1>
+        <ul>
+            {% for disco in discos %}
+                <li><strong>Título:</strong> {{ disco.titulo }}</li>
+                <li><strong>Año de Lanzamiento:</strong> {{ disco.anio_lanzamiento }}</li>
+
+                {% if disco.portada %}
+                    <li><strong>Portada:</strong> <img src="{{ disco.portada.url }}" alt="{{ disco.titulo }} Portada"></li>
+                {% endif %}
+                {% if disco.url_compra %}
+                    <li><strong>URL de Compra:</strong> <a href="{{ disco.url_compra }}" target="_blank">Comprar en línea</a></li>
+                {% endif %}
+                <br>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock contenidoQueCambia %}

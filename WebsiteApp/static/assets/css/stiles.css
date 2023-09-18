@@ -1,0 +1,50 @@
+div.contenido{
+    width: 100%;
+    padding: 2% 4% 2% 4%;
+}
+
+h1.titulo{
+
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+h2.subtitulo{
+    font-size: 2rem;
+  
+}
+
+body.homepage #header  {
+    height: 80px;
+    min-height: 0;
+  }
+
+#nav > ul {
+    line-height: 0px;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    height: 21px;
+    border-left: solid 1px transparent;
+    border-right: solid 1px transparent;
+}
+
+#nav > ul:before, #nav > ul:after {
+    content: '';
+    display: block;
+    width: 300%;
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    height: 5px;
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px transparent;
+}
+
+
+
+
+
+
+

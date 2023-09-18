@@ -1,0 +1,26 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+<div class="contenido">
+    <h1 class="titulo">Shop</h1>
+    <ul>
+        {% for shop in shops %}
+            <li><strong>Nombre:</strong> {{ shop.nombre }}</li>
+            <li><strong>Descripción:</strong> {{ shop.descripcion }}</li>
+            <li><strong>Precio:</strong> ${{ shop.precio }}</li>
+            {% if shop.imagen %}
+                <li><strong>Imagen:</strong> <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }} Imagen"></li>
+            {% endif %}
+            <li><strong>Categoría:</strong> {{ shop.categoria }}</li>
+            {% if shop.disponible %}
+                <li><strong>Disponible:</strong> Sí</li>
+            {% else %}
+                <li><strong>Disponible:</strong> No</li>
+            {% endif %}
+            <br>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock contenidoQueCambia %}

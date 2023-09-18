@@ -1,0 +1,41 @@
+{% extends 'padre.html' %}
+
+{% block contenidoQueCambia %}
+
+<div class="contenido">
+    <h1 class="titulo">Shop</h1>
+    <h2 class="subtitulo">Agregar producto</h2>
+    <br>
+
+    <form action="{% url 'agregar_shop' %}" method="post">{% csrf_token %}
+        
+    
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="100" required><br><br>
+    
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br><br>
+    
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" required><br><br>
+    
+        <label for="imagen">Imagen:</label>
+        <input type="file" id="imagen" name="imagen"><br><br>
+    
+        <label for="categoria">Categoría:</label>
+        <input type="text" id="categoria" name="categoria" maxlength="50" required><br><br>
+    
+        <label for="disponible">Disponible:</label>
+        <input type="checkbox" id="disponible" name="disponible" checked><br><br>
+    
+        <input type="submit" value="Guardar">
+    </form>
+
+</div>  
+  
+
+
+
+
+
+{% endblock contenidoQueCambia %}
